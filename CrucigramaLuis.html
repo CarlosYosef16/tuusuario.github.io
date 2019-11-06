@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Juego de Crucigrama</title>
+	<link rel="stylesheet" href="bootstrap.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		input{
+			width: 30px;
+		}
+		td {
+			width: 30px;
+			height: 26px;
+		}
+	</style>
+	<script>
+		function verificar(){
+			campo1= document.getElementById("p1_l1").value;
+			campo2=document.getElementById("p1_l2").value;
+			campo3= document.getElementById("p1_l3").value;
+			campo4= document.getElementById("p1_l4").value;
+
+			
+			if (campo1.length == 0 || /^\s+$/.test(campo1)) {
+        alert("este campo esta vacio");
+        return false;
+    
+    
+		}
+	
+		   if (campo2.length == 0) {
+            alert("este campo esta vacio");
+            return false;
+
+	}
+
+	if (campo3.length == 0) {
+        alert("este campo esta vacio");
+        return false;
+    
+}
+
+           if (campo4.length == 0 ) {
+              alert("este campo esta vacio");
+              return false;
+       
+   }
+  }
+  function revisar(){
+  	alert("la palabra 1 esta bien");
+  	for(var i=0; i<4; i++){
+      document.getElementById("p1_l1").value="C";
+      document.getElementById("p1_l2").value="A";
+      document.getElementById("p1_l3").value="R";
+      document.getElementById("p1_l4").value="A";
+     
+     
+      
+  }
+  alert("la palabra 2 esta bien");
+ for(var i=0; i<4; i++){
+ 	 document.getElementById("p1_l3").value="R";
+      document.getElementById("p1_l4").value="A";
+      document.getElementById("p1_l3").value="T";
+      document.getElementById("p1_l3").value="A";
+    
+     
+ }else{
+ 	alert("la palabra esta mal");
+ }
+
+ alert("la palabra 3 esta bien")
+ for(var i=0; i<5; i++){
+ 	document.getElementById("p1_l3").value="T";
+      document.getElementById("p1_l3").value="I";
+      document.getElementById("p1_l3").value="E";
+      document.getElementById("p1_l3").value="N";
+      document.getElementById("p1_l3").value="E";
+ }else{
+ 	alert("la palabra esta mal");
+ }
+ alert("la palabra 4 esta bien");
+ for(var i=0; i<2; i++){
+ 	document.getElementById("p1_l3").value="N";
+ 	document.getElementById("p1_l3").value="O";
+ }else{
+ 	alert("la palabra esta mal");
+ }
+ alert("felicidades el crucigrama ha sido terminado");
+}
+
+	</script>
+  	
+</head>
+<body class="container">
+	<h1>Juego de Crucigrama</h1><hr>
+	<div class="row">
+		<ol>
+			<li>Cara</li>
+			<li>Rata</li>
+			<li>Tiene</li>
+			<li>No</li>
+		</ol>
+	</div><br>
+	<div class="row">
+		<table border="1">
+			<tr>
+				<td><input type="text" id="p1_l1" value="C"></td>
+				<td><input type="text" id="p1_l2" value="A"></td>
+				<td><input type="text" id="p1_l3" value="R"></td>
+				<td><input type="text" id="p1_l4" value="A"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input type="text" id="p1_l3" value="A"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input type="text" id="p1_l3" value="T"></td>
+				<td><input type="text" id="p1_l3" value="I"></td>
+				<td><input type="text" id="p1_l3" value="E"></td>
+				<td><input type="text" id="p1_l3" value="N"></td>
+				<td><input type="text" id="p1_l3" value="E"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input type="text" id="p1_l3" value="A"></td>
+				<td></td>
+				<td></td>
+				<td><input type="text" id="p1_l3" value="O"></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+	<button onclick="revisar()">REVISAR</button>
+	<button onclick="verificar()">VERIFICAR</button>
+	
+</body>
+</html>
